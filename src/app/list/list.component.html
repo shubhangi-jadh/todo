@@ -1,0 +1,52 @@
+<div class="panel panel-danger">
+    <div class="panel-heading">
+<h2>User List</h2>
+     
+<label>Show <select class=""name="pageSize">
+        <option [ngValue]="2">2 items per page</option>
+        <option [ngValue]="4">4 items per page</option>
+        <option [ngValue]="6">6 items per page</option>
+</select> entries</label>
+
+<label>Search:<input type="text" (input)="search($event)" class="form-control" placeholder="Search By Title" />
+      
+        <!--sort--> 
+<select id="sort-by" (change)="sort($event)">
+          <option value="" selected disabled hidden>Sort By</option>
+          <option value="Title">title</option>
+          <option value="Low">Show Low to High price</option>
+          <option value="High">Show High to Low Price</option>
+</select>
+    
+<div class="panel-body">
+  <table class="table table-striped">
+    <thead>
+        <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Message</th>
+        <th>price</th>
+        <th>Date</th>
+        <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of userArray">
+        <td>{{user._id}}</td>
+        <td>{{user.title}}</td>
+        <td>{{user.message}}</td>
+        <td>{{user.price}}</td>
+        <td>{{user.date | date:"dd/MMM/yyyy"}}</td>
+        <td><button (click)="deleteUser(user._id)" class="btn btn-danger">Delete</button></td>
+        <td> <!--a [routerlink]="['/Edit/',user.id]">-->
+        <button routerLink="/edit/{{user._id}}" (click)="edit(user)" class="btn btn-success" type="button">Edit</button>
+        </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+<!-- <div class="dataTables_paginate paging_simple_numbers" id="paginate">
+      <a class="paginate_button_previous"  data-dt-idx="0" tabindex="0" id="datatable_previous">Previous</a>
+      <span><a class="paginate_button current" data-dt-idx="1" tabindex="0">1</a></span>
+      <a class="paginate_button next" data-dt-idx="2" tabindex="0" id="datatable_next">Next</a></div>
+</div>-->

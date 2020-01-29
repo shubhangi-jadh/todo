@@ -1,0 +1,65 @@
+<div class="container" style="width:40%; height: 50%;">
+  <div class="panel panel-danger">
+    <div class="panel-heading">
+     <h3>Create New User</h3></div></div>
+    <div class="row">
+    <div class="col-md-6">
+            <div class="form-group">
+    <input type="text" class="form-control" id="title" placeholder="title" [(ngModel)]="title" name="title">
+    </div></div>
+    <div class="col-md-6">
+      <div class="form-group">
+      <textarea class="form-control" rows="5" name="message" id="message" placeholder="message" [(ngModel)]="message" name="message"></textarea>
+      </div></div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+                <div class="form-group">
+        <input type="text" class="form-control" id="price" placeholder="price" [(ngModel)]="price" name="price">
+        </div></div>
+    <div class="row">
+    <div class="col-md-12">
+    <div class="form-group">
+    <input type="date" class="form-control" id="date" placeholder="date" [(ngModel)]="date" name="date">
+    </div></div>
+    </div>
+  <!--<div class="row">
+  <div class="col-md-12">
+        <div class="form-group">
+    <input type="email" class="form-control" id="email" placeholder="Email Address" [(ngModel)]="email" required name="="email>
+  </div></div>
+  </div>-->
+ <!-- <div class="row">
+    <div class="col-md-6">
+            <div class="form-group">
+    <input type="password" class="form-control" id="password" placeholder="Password" [(ngModel)]="password">
+    </div></div>
+    <div class="col-md-6">
+            <div class="form-group">
+     <input type="password" class="form-control" id="password" placeholder="Confirm Password">
+   </div>
+  </div></div>-->
+  
+  <div class="row">
+  <div class="col-md-6">
+  <button type="button" class="btn btn-primary" (click)="onButtonClick()">create</button>
+  </div>
+  <div class=" col-md-6">
+  <button type="button" class="btn btn-success">Reset</button>
+  </div>
+  </div>
+ <!-- <div class="row">
+  <div class="col-md-6">
+  <button class="btn btn-danger" (click)=" fetchUsers()">Fetch Data</button>
+  <table class="table">
+    <tr *ngFor="let user of users">
+      <td> {{ user.title }} </td>
+      <td> {{ user.message}} </td>
+      <td> {{ user.date }} </td>
+    </tr>
+  </table>
+  </div>
+  </div>
+  
+  </div>-->
+  

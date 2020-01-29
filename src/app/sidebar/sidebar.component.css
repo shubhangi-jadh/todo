@@ -1,0 +1,18 @@
+.side-bar{
+    background: #252223;
+}
+.flex-column {
+    flex-direction: column!important;
+}
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+}

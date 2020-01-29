@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding-top: 38px;
+    padding-bottom: 44px;
+   
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+    .container{
+    height: 100%;
+    align-content: center;
+    }
+    .card{
+    height: 520px;
+    margin-top: 90px;
+    margin-left:380px;
+    margin-bottom: auto;
+    width: 36%;
+    background: rgba(125, 63, 152, 0.52);
+    font-family: 'Lato', sans-serif;
+    }
+    .card-header h2{
+    color: white;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    }
+    .input-group-prepend span{
+    width: 50px;
+    background-color: #FFC312;
+    color: black;
+    border:0 !important;
+    }
+    .card-footer {
+    background-color: rgba(0,0,0,.03);
+    border-top: 1px solid rgba(0,0,0,.125);
+    }
+    .signin{
+        background: #d52685
+    }
